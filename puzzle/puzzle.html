@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+    <HEAD>
+        <META HTTP-EQUIV="Content-Type" CONTENT="text/html">
+            <TITLE>Lights Out Puzzle</TITLE>
+			<SCRIPT src="js/init.js"></SCRIPT>
+			<SCRIPT src="js/board_manip.js"></SCRIPT>
+			<SCRIPT src="js/board_solver.js"></SCRIPT>
+			<SCRIPT src="js/new_board.js"></SCRIPT>
+    </HEAD>
+    <BODY TEXT="#000000" BGCOLOR="#C0E0FF" ALINK="#000000" VLINK="#000000">
+        <FORM NAME="toolbar">
+            <TABLE>
+                <TR><TD>
+                    <INPUT TYPE="button" VALUE="NEW GAME" onClick="javascript:newGame()">
+                    <INPUT TYPE="button" VALUE="SOLVE"    onClick="javascript:solve()">
+                    <INPUT TYPE="button" VALUE="PLAY"     onClick="javascript:play()">
+                <TR HEIGHT=40pt><TD>
+                <SELECT NAME="colors" ONCHANGE="javascript:newSettings()">
+                    <OPTION VALUE="2" SELECTED>2 colors
+                    <OPTION VALUE="3"         >3 colors
+                    <OPTION VALUE="4"         >4 colors
+                    <OPTION VALUE="5"         >5 colors
+                </SELECT>
+                <SELECT NAME="dimension" ONCHANGE="javascript:newSettings()">
+                    <OPTION VALUE="3x3"         >3 x 3
+                    <OPTION VALUE="4x3"         >4 x 3
+                    <OPTION VALUE="4x4"         >4 x 4
+                    <OPTION VALUE="5x4"         >5 x 4
+                    <OPTION VALUE="5x5" SELECTED>5 x 5
+                    <OPTION VALUE="6x5"         >6 x 5
+                    <OPTION VALUE="6x6"         >6 x 6
+                    <OPTION VALUE="7x7"         >7 x 7
+                    <OPTION VALUE="8x8"         >8 x 8
+                    <OPTION VALUE="9x9"         >9 x 9
+                </SELECT>
+                <INPUT TYPE="button" VALUE="Check if solvable"      onClick="javascript:checkNormal()">
+                <INPUT TYPE="button" VALUE="Solvable Boards Stats"  onClick="javascript:tryStats()">
+                <INPUT TYPE="button" VALUE="Edit Board"             onClick="javascript:edit()">
+            </TABLE>
+        </FORM>
+		<SCRIPT LANGUAGE="JavaScript">
+
+
+newSettings();
+
+</SCRIPT>
+    </BODY>
+</HTML>
+
